@@ -1,0 +1,28 @@
+{
+  "name": "tredalix-ai-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:wasm && vite --host 127.0.0.1",
+    "dev:desktop": "npm run build:wasm && vite --host 127.0.0.1 --port 1420 --strictPort",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:icons": "tauri icon src-tauri\\icons\\app-icon.svg",
+    "build:wasm": "wasm-pack build ../src-wasm --target web --out-dir ../frontend/public/wasm --out-name tredalix_wasm --release",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run build:wasm && npm run typecheck && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.8.4",
+    "typescript": "6.0.3",
+    "vite": "8.3.5"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.8.0",
+    "@tauri-apps/plugin-opener": "^2.5.0",
+    "lightweight-charts": "^5.2.1"
+  }
+}

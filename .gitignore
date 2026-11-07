@@ -1,0 +1,43 @@
+/target/
+/src-wasm/target/
+/frontend/src-tauri/target/
+/frontend/src-tauri/target-verify/
+/frontend/src-tauri/gen/
+/models/
+/frontend/node_modules/
+/frontend/dist/
+/frontend/public/wasm/
+.env
+.env.*
+!.env.example
+*.secret
+*.secret.*
+*.log
+.DS_Store
+Thumbs.db
+# Personal notes and backups
+*.txt
+*.text
+docs/Cargo.toml
+
+# Personal market datasets
+data/NIFTY50.csv
+data/SBIN.csv
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# AI model files
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.onnx
+models/
+
+# Build files
+node_modules/
+dist/
+target/
